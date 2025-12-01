@@ -1,8 +1,9 @@
-trigger: none 
-pool: Default
+trigger:
+- main
 
-steps: 
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'Write-Host "Hello World"'
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo "Pipeline working!"
+  displayName: "Testing pipeline"
