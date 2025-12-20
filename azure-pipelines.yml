@@ -1,9 +1,7 @@
-trigger:
-- main
-
-pool:
-  vmImage: 'ubuntu-latest'
-
+trigger: none
+pool: Agent
 steps:
-- script: echo "Pipeline working!"
-  displayName: "Testing pipeline"
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+    
